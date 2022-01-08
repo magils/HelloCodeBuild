@@ -16,6 +16,6 @@ phases:
     commands:
       - echo This is the Post Build phase
       - mvn clean test
-  artifacts:
-    files:
-      - target/HelloCodeBuild-1.0-SNAPSHOT.jar
+artifacts:
+  files:
+    - target/HelloCodeBuild-1.0-SNAPSHOT.jar
