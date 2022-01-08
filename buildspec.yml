@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  pre_build:
+    commands:
+      - echo This is the prebuild phase
+  build:
+    commands:
+      - echo This is the Build phase
+      - mvn install
+      - mvn clean package
+  post_build:
+    commands:
+      - echo This is the Post Build phase
+      - mvn clean test
+  artifacts:
+    files:
+      - target/HelloCodeBuild-1.0-SNAPSHOT.jar
